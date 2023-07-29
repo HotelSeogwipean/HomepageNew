@@ -1,0 +1,251 @@
+﻿#facilitiesWrapper {
+    width: 1280px;
+    margin: 50px auto;
+    font-family: NanumGothic, sans-serif;
+    margin-bottom: 800px;
+}
+
+#followMouse {
+    position: relative;
+}
+
+    #followMouse > span {
+        position: absolute;
+        right: 0;
+        height: 150px;
+        font-size: 11px;
+        font-weight: 400;
+        cursor: default;
+        writing-mode: vertical-rl;
+    }
+
+.underBarBox {
+    position: relative;
+}
+
+    .underBarBox > div:nth-of-type(1) {
+        width: 38%;
+        border-bottom: 1.5px solid #1e514f;
+    }
+
+    .underBarBox > div:nth-of-type(2) {
+        width: 100%;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+h2 {
+    color: #507876;
+    font-weight: 400;
+}
+
+#facilitiesWrapper p {
+    font-family: 'Yu Gothic', sans-serif;
+    word-spacing: 1px;
+    line-height: 13px;
+    font-weight: 400;
+}
+
+.detailBox {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+    .detailBox > div {
+        position: relative;
+        float: left;
+    }
+
+
+
+
+@media only screen and (min-width: 320px) {
+    .underBarBox > div:nth-of-type(1) {
+        width: 100%;
+        border-bottom: 1.5px solid #1e514f;
+    }
+
+    .underBarBox > div:nth-of-type(2) {
+        display: none;
+    }
+
+    .detailBox .imageBox,
+    .detailBox .imageBox img {
+        width: 100%;
+    }
+
+    .detailBox .captionBox {
+        width: 100%;
+    }
+
+    .captionBox img {
+        width: 319px;
+    }
+
+    #facilitiesWrapper {
+        width: 320px;
+    }
+
+    #followMouse{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 374px) {
+    .captionBox img {
+        width: 375px;
+    }
+
+    #facilitiesWrapper {
+        width: 375px;
+    }
+}
+
+@media only screen and (min-width: 424px) {
+    .captionBox img {
+        width: 485px;
+    }
+
+    #facilitiesWrapper {
+        width: 425px;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #followMouse {
+        display: block;
+    }
+
+    #facilitiesWrapper {
+        width: 768px;
+    }
+
+    .detailBox .imageBox {
+        width: 50%;
+    }
+
+        .detailBox .imageBox img {
+            width: 90%;
+        }
+
+    .detailBox .captionBox {
+        width: 50%;
+    }
+
+    .captionBox img {
+        width: 180px;
+        height: 120px;
+    }
+
+    .underBarBox > div:nth-of-type(1) {
+        width: 45%;
+        border-bottom: 1.5px solid #1e514f;
+    }
+
+    .underBarBox > div:nth-of-type(2) {
+        width: 100%;
+        display: block;
+        border-bottom: 1px solid #d8d8d8;
+    }
+
+    #coffeeMachine {
+        height: 565px;
+        background-image: url('../images/CoffeeMachine.jpg');
+        background-repeat: no-repeat;
+    }
+
+    #pool {
+        height: 565px;
+        background-image: url('../images/Pool.jpg');
+        background-repeat: no-repeat;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #facilitiesWrapper {
+        width: 1024px;
+    }
+
+    .detailBox .imageBox {
+        width: 40%;
+    }
+
+        .detailBox .imageBox img {
+            width: 95%;
+        }
+
+    .detailBox .captionBox {
+        width: 60%;
+    }
+
+    .captionBox img {
+        width: 49%;
+        height: 200px;
+    }
+
+    .underBarBox > div:nth-of-type(1) {
+        width: 38%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #facilitiesWrapper {
+        width: 1280px;
+    }
+
+    .captionBox img {
+        width: 49%;
+        height: 250px;
+        margin-top: 65px;
+    }
+}
+
+@media only screen and (max-width: 763px) {
+    .underBarBox div h2{
+        text-align: center;
+    }
+    .underBarBox > div:nth-of-type(1) {
+        border-bottom: none;
+    }
+    .underBarBox > div:nth-of-type(1) {
+        border-bottom: none;
+    }
+    .underBarBox div h2 {
+        text-align: center;
+    }
+    .detailBox {
+        margin-top: 0px;
+    }
+    .captionBox h2{
+        text-align: center;
+    }
+    #facilitiesWrapper p {
+        word-spacing: 0px;
+        line-height: 22px;
+        font-size: 12px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0px 15px 0px 15px;
+    }
+
+    .detailBox .captionBox div:nth-of-type(3){
+        display: none;
+    }
+
+    #coffeeMachine {
+        background-image: url('../images/Bread1.jpg');
+        height: 267px;
+    }
+
+    #pool {
+        background-image: url('../images/Pool1.jpg');
+        height: 300px;
+    }
+
+    #facilitiesWrapper {
+        margin-bottom: 600px;
+    }
+}

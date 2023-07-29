@@ -1,0 +1,156 @@
+﻿@*@@using Hoon.Service.Member*@
+@using Microsoft.AspNetCore.Http.Extensions
+@{
+    //var member = MemberSessionService.GetMemberSession(this.Context.Session);
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Hotel Seogwipean Official Site">
+    <meta name="description" content="Hotel Seogwipean Official Site">
+    <meta property="og:description" content="Hotel Seogwipean Official Site">
+    <meta property="og:image" content="http://hotelseogwipean.com/images/logo.png">
+    <meta property="og:url" content="http://hotelseogwipean.com/">
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <meta name="naver-site-verification" content="6cf9722402a253d0f5e46e5278dba97165eabb01" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Hotel Seogwipean</title>
+    <link href="~/css/layout.css" rel="stylesheet" type="text/css" />
+    <link href='~/css/seogwipean.css' rel='stylesheet' type='text/css'>
+    <link href="~/css/custom-alert.css" rel="stylesheet" />
+    @RenderSection("Head", required: false)
+</head>
+
+<body>
+    <div id="loaderBox">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+    <header class="main_h sticky">
+        <a class="logo" href="/">
+            <img src="~/images/mainLogoOriginal.png" />
+        </a>
+        <div class="row">
+            <div class="mobile-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="navbar-right">
+                <nav>
+                    <ul>
+                        <li><a href="/">HOME</a></li>
+                        @*<li><a href="/">ABOUT</a></li>*@
+                        <li><a href="/Room">ROOMS & RATES</a></li>
+                        <li><a href="/Facilities">FACILITIES</a></li>
+                        @*<li><a href="/Review">REVIEW</a></li>*@
+                        <li><a href="/Location">CONTACT</a></li>
+                        @*<li><a href="/community">COMMUNITY</a></li>*@
+                        <li><a href="https://be.wingsbooking.com/ko/SGP1/redirect/" target="_blank">RESERVATION</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div> <!-- / row -->
+        @*<div class="booking">
+                <a>예약하기</a>
+            </div>*@
+    </header>
+
+    @*<section class="wrapper">*@
+    @RenderBody()
+    @*</section>*@
+
+    <footer class="footer">
+        <div id="footer_1">
+            <div></div>
+            <div><span>TEL 064-735-1453</span></div>
+            <div><span>FAX 064-735-1455</span></div>
+            <div><span>제주특별자치도 서귀포시 보목로 64번길 178</span></div>
+            <div><span>B & LEE WORLD (주)비앤리월드 | 616-86-06176</span></div>
+        </div>
+        <div id="footer_2">
+            <div></div>
+            <div><span>Follow Us</span></div>
+            <div class="snsBtns">
+                <a href="https://www.instagram.com/hotelseogwipean_official/" target="_blank"><img id="instaBtn" src="~/images/whiteInsta.png" /></a>
+                <a href="https://www.facebook.com/HotelSeogwipeanJeju/" target="_blank"><img id="faceBtn" src="~/images/whiteFace.png" /></a>
+            </div>
+        </div>
+        <div id="footer_3">
+            <div></div>
+            <span class="signature">Copyrightⓒ 2022. <a>B&LEE World Co., Ltd</a>. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery-3.2.1.min.js"></script>
+    <script src="~/lib/jquery-ui.min.js"></script>
+    <script src="~/js/common.js"></script>
+    <script src="~/lib/custom-alert.js"></script>
+    <!-- 공통 적용 스크립트 , 모든 페이지에 노출되도록 설치. 단 전환페이지 설정값보다 항상 하단에 위치해야함 -->
+    <script type="text/javascript" src="//wcs.naver.net/wcslog.js"></script>
+    <script type="text/javascript">
+        if (!wcs_add) var wcs_add = {};
+        wcs_add["wa"] = "1166ea4958f93b0";
+        if (window.wcs) {
+            wcs_do();
+        }
+    </script>
+
+    <script type="text/javascript">
+        // 알림창 변경
+        new customAlert();
+        $('.mobile-toggle').click(function () {
+            if ($('.main_h').hasClass('open-nav')) {
+                $('.main_h').removeClass('open-nav');
+                $('nav ul li a').css('display', 'none');
+            } else {
+                $('.main_h').addClass('open-nav');
+                $('nav ul li a').css('display', 'block');
+            }
+        });
+
+        $('.main_h li a').click(function () {
+            if ($('.main_h').hasClass('open-nav')) {
+                $('.navigation').removeClass('open-nav');
+                $('.main_h').removeClass('open-nav');
+            }
+        });
+
+        $('nav a').click(function (event) {
+            var id = $(this).attr("href");
+            var offset = 70;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({
+                scrollTop: target
+            }, 500);
+            event.preventDefault();
+        });
+
+        $(".logo").click(function () {
+            location.href = "/Intro";
+        });
+
+    </script>
+    @RenderSection("EndBody", required: false)
+</body>
+</html>

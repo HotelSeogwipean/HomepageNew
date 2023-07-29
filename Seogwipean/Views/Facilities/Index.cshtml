@@ -1,0 +1,92 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Head{
+    <link href="~/css/facilities.css" rel="stylesheet" />
+}
+
+    <section id="facilitiesWrapper">
+        <div id="followMouse">
+            <span>FACILITIES</span>
+        </div>
+
+        <div class="underBarBox">
+            <div>
+                <h2>부대시설</h2>
+            </div>
+            <div></div>
+        </div>
+
+        <div class="detailBox">
+            <div class="imageBox">
+                <img id="coffeeMachine"/>
+            </div>
+            <div class="captionBox">
+                <div>
+                    <h2>1F 보래드 베이커스</h2>
+                </div>
+                <div>
+                    <p>안녕하세요. 호텔 서귀피안입니다.</p>
+                    <p>보래드 베이커스는 호텔에서 직접 운영하는 카페입니다.</p>
+                    <p>아침에 갓 구운 빵과 자체 로스팅한 커피를 즐기실 수 있으며</p>
+                    <p>바다가 보이는 카페에서 여유로운 휴식 시간을 가질 수 있는</p>
+                    <p>호텔 서귀피안의 휴식 공간입니다.</p>
+                </div>
+                <div>
+                    <img src="~/images/Bread1.jpg" />
+                    <img src="~/images/Bread2.jpg" />
+                </div>
+            </div>
+        </div>
+
+        <div class="underBarBox">
+            <div>
+                &nbsp;
+            </div>
+            <div></div>
+        </div>
+
+        <div class="detailBox">
+            <div class="imageBox">
+                <img id="pool" />
+            </div>
+            <div class="captionBox">
+                <div>
+                    <h2>1F 야외 수영장</h2>
+                </div>
+                <div>
+                    <p>안녕하세요, 호텔 서귀피안입니다.</p>
+                    <p>키즈풀을 목적으로 제작된 이 수영장은 현재 하절기에만 운영되고 있습니다.</p>
+                    <p>평균 60cm의 수심을 유지하여 성인 인원의 경우 허벅지 높이에 해당합니다.</p>
+                    <p>만 5세 이하는 보호자의 관심과 주의가 필요하며</p>
+                    <p>튜브 무료 대여가 가능하여, 더욱 안전하고</p>
+                    <p>즐거운 수영장을 즐기실 수 있습니다.</p>
+                    <p>※ 현재는 코로나 바이러스로 인하여 운영이 중단된 상태입니다.</p>
+                </div>
+                <div>
+                    <img src="~/images/Pool1.jpg" />
+                    <img src="~/images/Pool2.jpg" />
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+@section EndBody{
+    <script type="text/javascript">
+        var _mouseY;
+        $(function () {
+            $(document).mousemove(function (e) {
+                _mouseY = e.pageY;
+                if (_mouseY > 120 && _mouseY < 1600) {
+                    $("#followMouse > span").css("top", eval(_mouseY - 170));
+                }
+            });
+
+            if (screen.width <= 425) {
+                $("#facilitiesWrapper").css("width", screen.width);
+            }
+        });
+    </script>
+}

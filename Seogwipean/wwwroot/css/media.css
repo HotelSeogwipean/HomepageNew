@@ -1,0 +1,59 @@
+﻿#logo {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 320px) {
+    #logo img{
+        width: 300px;
+    }
+}
+
+.g_img-cont{
+    width: 100%;
+    height: 500px;
+}
+
+.pictureViewer {
+    margin: 0 auto;
+}
+
+.videoPlayer {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btnBox {
+    margin-top: 5%;
+    width: 50%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+    .btnBox [type=button] {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: white;
+        background-color: #153908;
+        border: 1px solid #153908;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+#btnPicture {
+    margin-top: 2%;
+    width: 100%;
+    font-size: 15px;
+}
+
+#btnPrev {
+    width: 100%;
+    font-size: 15px;
+}
+
+.btnBox [type=button]:hover {
+    background-color: #20520e;
+}

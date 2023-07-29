@@ -1,0 +1,207 @@
+﻿html, body {
+    height: 100%;
+    margin: 0;
+}
+
+    body > .wrapper {
+        min-height: 100%;
+        margin-top: 0;
+        margin-bottom: -10px;
+    }
+
+    body > .footer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 33% 34% 33%;
+        margin-top: 25px;
+        background-color: #1e514f;
+        /*padding-top: 15px;
+        padding-bottom: 25px;*/
+    }
+
+    body > .footer *{
+        box-sizing: border-box;
+    }
+
+        body > .footer > div:not(:last-of-type) span {
+            font-family: 'NanumGothic', 'sans-serif';
+            font-size: 0.8em;
+            font-weight: 100;
+            color: #fff;
+        }
+
+        body > .footer,
+        body > .wrapper > .push {
+            position: relative;
+        }
+
+            body > .footer > div {
+                margin: 0 auto;
+            }
+
+                body > .footer > div > div {
+                    margin-top: 5px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+                body > .footer > div  > div:first-of-type {
+                    margin-top: 20px;
+                }
+
+                    body > .footer > div > div:first-of-type {
+                        width: 35px;
+                        border-top: 1px solid gray;
+                    }
+
+            body > .footer > #footer_2 img{
+                width: 25px;
+                height: 25px;
+                cursor: pointer;
+            }
+            body > .footer > #footer_2 > div {
+                line-height: 30px;
+            }
+            .signature {
+                position: relative;
+                font-weight: 100;
+                color: #fff;
+                letter-spacing: 4px;
+                font-size: 10px;
+                width: 100vw;
+                text-align: center;
+                text-transform: uppercase;
+                text-decoration: none;
+                top: 35px;
+            }
+
+.logo img {
+    cursor: pointer;
+}
+
+
+@font-face {
+    font-family: 'Arita-dotum-Thin_TTF';
+    src: url('fonts/Arita-dotum-Thin_TTF.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arita-dotum-SemiBold_TTF';
+    src: url('fonts/Arita-dotum-SemiBold_TTF.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arita-dotum-Medium_TTF';
+    src: url('fonts/Arita-dotum-Medium_TTF.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arita-dotum-Light_TTF';
+    src: url('fonts/Arita-dotum-Light_TTF.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Arita-dotum-Bold_TTF';
+    src: url('fonts/Arita-dotum-Bold_TTF.eot') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+#loaderBox {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 125%;
+    background-color: white;
+    z-index: 1;
+}
+
+.spinner {
+    top: 25%;
+    margin: 100px auto;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    -webkit-animation: sk-rotate 2.0s infinite linear;
+    animation: sk-rotate 2.0s infinite linear;
+}
+
+.dot1, .dot2 {
+    width: 60%;
+    height: 60%;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    background-color: #333;
+    border-radius: 100%;
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.dot2 {
+    top: auto;
+    bottom: 0;
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-rotate {
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes sk-rotate {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% {
+        -webkit-transform: scale(0.0)
+    }
+
+    50% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    }
+
+    50% {
+        transform: scale(1.0);
+        -webkit-transform: scale(1.0);
+    }
+}
+
+@media only screen and (max-width: 426px) {
+    body > .footer > #footer_1 {
+        margin-left: 10px;
+    }
+
+        body > .footer > #footer_1 > div {
+            line-height: 25px;
+        }
+    #footer_2 .snsBtns {
+        margin-top: 30px;
+    }
+    .signature {
+        top: 10px;
+    }
+
+}

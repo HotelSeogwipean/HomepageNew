@@ -1,0 +1,109 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>SPP - COUPON</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <meta property="og:title" content="Seogwipean Project Coupon">
+    <meta name="description" content="Seogwipean Project Coupon">
+    <meta property="og:description" content="Seogwipean Project Coupon">
+    <meta property="og:image" content="https://seogwipean.net/img/pav.png">
+    <meta property="og:url" content="https://seogwipean.net/">
+    <link rel="apple-touch-icon" sizes="57x57" href="~/favicon/spp/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="~/favicon/spp/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="~/favicon/spp/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="~/favicon/spp/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="~/favicon/spp/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="~/favicon/spp/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="~/favicon/spp/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="~/favicon/spp/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="~/favicon/spp/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="~/favicon/spp/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="~/favicon/spp/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="~/favicon/spp/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="~/favicon/spp/favicon-16x16.png">
+    <link rel="manifest" href="~/favicon/spp/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/favicon/spp/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="~/favicon/spp/ms-icon-144x144.png">
+    <link rel="stylesheet" href="~/css/coupon.css" />
+    <link rel="stylesheet" href="~/css/custom-alert.css"/>
+</head>
+<body>
+    <div id="loaderBox">
+        <div class="spinner">
+            <div class="dot1"></div>
+            <div class="dot2"></div>
+        </div>
+    </div>
+
+    <div id="wrap">
+        <img src="~/img/beachhousecoupon.png">
+        <input type="button" value="사용하기" id="btn"/>
+    </div>
+
+    <div id="used">
+        <img src="~/img/bakerycoupon.png">
+        <h1>사용 완료한 쿠폰입니다.</h1>
+    </div>
+
+    <script src="~/lib/custom-alert.js"></script>
+    <script type="text/javascript" src="~/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="~/lib/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        new customAlert();
+        var _cookie;
+        _cookie = $.cookie('sbeach');
+        function fnUse(){
+            $("#wrap").remove();
+                $("#used").show();
+        }
+        $(function () {
+            if(_cookie != undefined){
+                fnUse();
+            }
+            $("#loaderBox").fadeOut(3000);
+        });
+
+        
+
+        function setScreenSize() {
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+        }
+        setScreenSize();
+
+        window.addEventListener('resize', () => setScreenSize());
+        disableScroll = () => {
+            document.querySelector('body').addEventListener('touchmove', this.removeEvent, { passive: false });
+            document.querySelector('body').addEventListener('onclick', this.removeEvent, { passive: false });
+            document.querySelector('body').addEventListener('mousewheel', this.removeEvent, { passive: false });
+        }
+        removeEvent = e => {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        enableScroll = () => {
+            document.querySelector('body').removeEventListener('touchmove', this.removeEvent);
+            document.querySelector('body').removeEventListener('onclick', this.removeEvent);
+            document.querySelector('body').removeEventListener('mousewheel', this.removeEvent);
+        }
+        
+        $("#btn").click(function(){
+            var btnCancel = "<button class='btn custom-alert btn_cancel' style='margin-left: 10px;' onclick='$(`#customalert`).hide(); $(`#customalert-overlay`).hide();$(`.btn_cancel`).remove();'>취소</button>";
+            $("#customalert .footer").append(btnCancel);
+            alert("주의!<br/><br/>직원 외 사용시 쿠폰의 복구가 불가능합니다. <br/>직원이 사용 버튼을 누르고 있습니까?", function () {
+                $.cookie('sbeach', '1', { expires: 31, path: '/' });
+                fnUse();
+            });
+        });
+
+    </script>
+</body>
+</html>

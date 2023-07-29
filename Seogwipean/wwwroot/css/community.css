@@ -1,0 +1,321 @@
+﻿p {
+    font-size: inherit;
+}
+
+body {
+    font-family: "Arita-dotum-SemiBold_TTF", sans-serif;
+}
+
+.topBanner h1 {
+    color: black;
+}
+
+section {
+    width: 100%;
+    margin-top: 50px;
+}
+
+    section #titleBar {
+        width: 970px;
+        height: 100px;
+        margin: 0 auto;
+        font-size: 42px;
+        font-weight: 500;
+        color: #000000;
+        letter-spacing: 5px;
+        border-bottom: 1px solid #757575;
+    }
+    section #container {
+        margin: 0 auto;
+    }
+@media only screen and (min-width: 320px) {
+    section #container {
+        width: 320px;
+        margin: 0 auto;
+    }
+
+    #tableContents .tableHead th:nth-of-type(1) {
+        width: 5%;
+    }#tableContents .tableHead th:nth-of-type(3) {
+        width: 15%;
+    }#tableContents .tableHead th:nth-of-type(4) {
+        width: 25%;
+    }#tableContents .tableHead th:nth-of-type(5) {
+        width: 9%;
+    }
+}
+
+@media only screen and (min-width: 375px) {
+    section #container {
+        width: 375px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 425px) {
+    section #container {
+        width: 425px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    section #container {
+        width: 970px;
+        margin: 0 auto;
+    }#tableContents .tableHead th:nth-of-type(1) {
+        width: 5%;
+    }#tableContents .tableHead th:nth-of-type(3) {
+        width: 10%;
+    }#tableContents .tableHead th:nth-of-type(4) {
+        width: 10%;
+    }#tableContents .tableHead th:nth-of-type(5) {
+        width: 5%;
+    }
+}
+
+.comTable {
+    width: 100%;
+    color: #444;
+    font-size: 12px;
+    table-layout: fixed;
+    clear: both;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-bottom: 1px solid #494949 !important;
+}
+
+    .comTable, .comTable th, .comTable td {
+        border: 0;
+    }
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+
+.comTable th {
+    padding: 10px 0;
+    text-align: center;
+    background-color: #1e514f;
+    border-top: 1px solid #494949;
+    color: #fff;
+    line-height: 18px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    vertical-align: top;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.comTable, .comTable th, .comTable td {
+    border: 0;
+}
+
+    .comTable .num, .comTable .date, .comTable .hit {
+        padding: 0;
+        font-family: Arial,Tahoma;
+        color: #999;
+        font-size: 11px;
+        line-height: normal;
+    }
+
+.listTable td {
+    padding: 10px;
+    border-top: solid 1px #aa9595;
+    text-align: center;
+}
+
+.listTable tr td a {
+    color: #000000;
+}
+
+.listTable tr:hover {
+    background-color: #ede9e9;
+}
+
+.view_page {
+    clear: both;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 50px;
+    display: none;
+}
+
+.view_type {
+    clear: both;
+    position: relative;
+    margin: 0;
+    width: 98%;
+    padding: 10px 1%;
+    text-align: left;
+    height: 30px;
+    background-color: #f2efed;
+}
+
+    .view_type .view_type01 {
+        color: #2b221e;
+        font-weight: bold;
+        float: left;
+        line-height: 30px;
+    }
+
+    .view_type .view_type02 {
+        color: #2b221e;
+        float: right;
+        line-height: 30px;
+    }
+
+#writeContents {
+    font-size: 12px;
+}
+
+.viewcont {
+    padding: 0px 20px 20px 20px;
+}
+
+.view_page .cboth {
+    margin-top: 10px;
+    float: right;
+}
+
+    .view_page .cboth .btnBox {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+input[type=button] {
+    width: 60px;
+    display: inline-block;
+    height: 25px;
+    border: 1px solid #9f9898;
+    border-radius: 8px;
+    font-size: 15px;
+    line-height: 20px;
+    text-align: center;
+    background-color: #fff;
+    -webkit-transition: background-color 0.05s ease-in-out;
+    -moz-transition: background-color 0.05s ease-in-out;
+    -o-transition: background-color 0.05s ease-in-out;
+    transition: background-color 0.05s ease-in-out;
+}
+
+    input[type=button]:hover {
+        border: 1px solid #757070;
+    }
+
+#pagingBox {
+    width: 100%;
+    margin-top: 15px;
+}
+
+    #pagingBox #paging {
+        margin: 0 auto;
+    }
+
+a.paging-item {
+    color: #494949;
+    border: 1px solid #ececec;
+    height: 23px;
+    text-decoration: none;
+    padding: 8px 11px 6px 11px;
+    margin-left: 4px;
+}
+
+    a.paging-item.selected {
+        color: #2b221e;
+        border: 1px solid #999;
+    }
+
+#btnBox {
+    margin-top: 10px;
+    float: right;
+}
+
+#commentsWrite {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+}
+    #commentsWrite table{
+        width: 100%;
+    }
+
+    #commentsWrite table tr:last-of-type td:first-of-type{
+        width: 90%;
+    }
+        #commentsWrite table tr:last-of-type td:last-of-type {
+            width: 10%;
+        }
+
+        #commentsWrite table tr:first-of-type label:last-of-type{
+            margin-left: 2%;
+        }
+
+        #commentsWrite input[type=password], #commentsWrite input[type=text] {
+            width: 40%;
+            background: #EAEAEA;
+            border: 1px solid #D8D8D8;
+            border-radius: 4px;
+            resize: none;
+        }
+
+        #commentsWrite textarea {
+            width: 100%;
+            height: 60px;
+            background: #EAEAEA;
+            border: 1px solid #D8D8D8;
+            border-radius: 4px;
+            resize: none;
+        }
+
+#commentsWrite input[type=button]{
+    margin-left: 10px;
+    height: 50px;
+}
+
+#commentContents .com_writerInfo {
+    height: 28px;
+    clear: both;
+    line-height: 28px;
+    font-size: 12px;
+}
+
+
+#commentContents .com_writerInfo2{
+    float: left;
+    margin: 2px 0px 0px 2px;
+    font-size: 12px;
+}
+#commentContents .com_date {
+    color: #888888;
+    font-size: 11px;
+}
+#commentContents .com_comment {
+    line-height: 20px;
+    padding: 7px;
+    word-break: break-all;
+    overflow: hidden;
+    clear: both;
+    font-size: 12px;
+}
+#commentContents{
+
+}
+body > .footer, body > .wrapper > .push {
+    margin-top: 14.3%;
+}
+#banner {
+    float: left;
+    position: relative;
+    width: 40%;
+    border-bottom: 1px solid #1e514f;
+    margin-bottom: 50px;
+}
+    #banner h2 {
+        font-size: 42px;
+        font-weight: 200;
+        color: #1e514f;
+    }
